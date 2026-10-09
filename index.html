@@ -1,81 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Brenalyn | Portfolio</title>
 
-  <style>
-    *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-    body{
-      font-family: Arial, sans-serif;
-      background: #f7f9fc;
-      color: #333;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-    /*Navigator*/
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background:white;
-      padding: 18px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 15px rgba(0,0,0,0,08);
-    }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f9fc;
+            color: #333;
+        }
 
-    nav h2 {
-      color: 2563eb;
-    }
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
 
-    nav a{
-      text-decoration: none;
-      color: #333;
-      margin-left: 20px;
-      font-weight: bold;
-    }
+        nav h2 {
+            color: #2563eb;
+        }
 
-    nav a:hover{
-      color: #2563eb;
-    }
-    /*hero*/
-    .hero{
-      min-height: 90hv;
-      display: flex;
-      justify-items: center;
-      align-items:center;
-      text-align:center;
-      padding: 40px 20px;
-      background: linear-gradient(135deg, #dbeafe, #eff6ff, #ffffff);
-    }
-      
-  </style>
-  </head>
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 20px;
+            font-weight: bold;
+        }
 
-  <body>
-    <h1>Welcome to My Portfolio</h1>
+        nav a:hover {
+            color: #2563eb;
+        }
 
-    <h2>About Me</h2>
-    <p>Hello I am a student learning about technology and programming</p>
-    <h2>My Skills</h2>
+        /* Hero */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #dbeafe, #eff6ff, #ffffff);
+        }
 
-    <ul>
-      <il>Basic HTML</il>
-      <il>Computer Skills</il>
-      <il>Programming</il>
-    </ul>
+        .hero-content {
+            max-width: 700px;
+        }
 
-    <h2>My Projects</h2>
-    <p>Here are some of my school projects and activities.</p>
+        .hero h1 {
+            font-size: 55px;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+        }
 
-    <h2>Contact Me</h2>
-    <p>Email: gonzalesbrenalyn2007@gmail.com</p>
-  </body>
+        .hero p {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 25px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
+            transform: translateY(-3px);
+        }
+
+        /* Sections */
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 80px 25px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: #1e3a8a;
+            margin-bottom: 40px;
+        }
+
+        .about {
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Skills */
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background: white;
+            padding: 18px 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Projects */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-7px);
+        }
+
+        .project h3 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .project p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+            background: #eff6ff;
+            border-radius: 20px;
+        }
+
+        .contact p {
+            margin: 12px 0;
+            font-size: 17px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #1e3a8a;
+            color: white;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h2>Brenalyn</h2>
+
+        <div>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Hello, I'm Brenalyn 👋</h1>
+
+            <p>
+                Student • Technology Enthusiast • Beginner Programmer
+            </p>
+
+            <a href="#about" class="button">
+                Explore My Portfolio
+            </a>
+        </div>
+    </div>
+
+    <!-- About -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+
+        <p class="about">
+            Hello! My name is Brenalyn. I am a student interested in
+            technology, computers, and programming. I enjoy learning
+            new skills and creating projects that help me understand
+            technology better.
+        </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills">
+            <div class="skill">💻 HTML</div>
+            <div class="skill">🌐 Web Design</div>
+            <div class="skill">🖥️ Computer Skills</div>
+            <div class="skill">⌨️ Programming</div>
+            <div class="skill">🧩 Problem Solving</div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="projects">
+
+            <div class="project">
+                <h3>🌐 My First Website</h3>
+                <p>
+                    A simple website I created while learning
+                    the basics of HTML and web development.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>💻 School Projects</h3>
+                <p>
+                    Different technology and computer projects
+                    that I completed for school activities.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>⌨️ Programming Activities</h3>
+                <p>
+                    Beginner programming activities that helped
+                    me practice logical thinking and coding.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="contact">
+            <h2 class="section-title">Contact Me</h2>
+
+            <p>📧 Email: your-email@example.com</p>
+            <p>📍 Philippines</p>
+
+            <br>
+
+            <a href="mailto:your-email@example.com" class="button">
+                Send Me an Email
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Brenalyn | Student Portfolio</p>
+    </footer>
+
+</body>
 </html>
+Sent 1m a
